@@ -7,7 +7,6 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 const HomeScreen = () => {
-  // useState example
   const [add, setAdd] = useState(0);
   return (
     <ParallaxScrollView
@@ -28,8 +27,8 @@ const HomeScreen = () => {
          There are several <ThemedText type="defaultSemiBold">Hooks</ThemedText> available in React but in React Native we are using few of them that are using normally in the React Native mobile app.
         </ThemedText>
         <ThemedText type="defaultSemiBold">01: useState</ThemedText>
-        <ThemedText type="defaultSemiBold">02: useReducer</ThemedText>
-        <ThemedText type="defaultSemiBold">03: useEffect</ThemedText>
+        <ThemedText type="defaultSemiBold">02: useEffect</ThemedText>
+        <ThemedText type="defaultSemiBold">03: useReducer</ThemedText>
         <ThemedText type="defaultSemiBold">04: useRef</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -39,8 +38,11 @@ const HomeScreen = () => {
           The first value is the current state value and the second value is a function that allows you to update the state.
         </ThemedText>
       </ThemedView>
+      <View style={{alignItems: 'center'}}>
+        <Image source={require('@/assets/images/useState-code.png')} style={{height: 170, resizeMode:'contain'}}/>
+      </View>
       <Text style={{fontSize: 40, textAlign: 'center', marginHorizontal: 90, paddingVertical: 10, borderRadius:10, backgroundColor:'#007bff', color: 'white'}}>{add}</Text>
-      <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-evenly', paddingBottom:20}}>
         <TouchableOpacity style={styles.buttonStyle} onPress={() => setAdd(Math.max(0, add - 1))}>
           <Text style={{fontSize: 40, color: 'white'}}>-</Text>
         </TouchableOpacity>
