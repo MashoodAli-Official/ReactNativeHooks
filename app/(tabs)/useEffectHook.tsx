@@ -7,18 +7,17 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-const TabTwoScreen = () => {
+const useEffectHook = () => {
   const [add, setAdd] = useState(0); 
-  useEffect(() => { console.log('Count changed:', add)}, [add]);
+  useEffect (()=> {console.log('Count Changed:', add)}, [add])
   
-
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#801080', dark: '#353636' }}
       headerImage={
         <IconSymbol
           size={310}
-          color="#808080"
+          color="#000000"
           name="chevron.left.forwardslash.chevron.right"
           style={styles.headerImage}
         />
@@ -49,7 +48,7 @@ const TabTwoScreen = () => {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: '#FFFFFF',
     bottom: -90,
     left: -35,
     position: 'absolute',
@@ -67,4 +66,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default TabTwoScreen;
+export default useEffectHook;
