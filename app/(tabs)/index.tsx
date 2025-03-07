@@ -77,7 +77,11 @@ const styles = StyleSheet.create({
     width: 50,
     borderRadius: 14,
     backgroundColor:'#007bff'
-  }
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    gap: 8,
+  },
 });
 
 export default HomeScreen;
