@@ -24,10 +24,10 @@ const useContextHook = () => {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">useReducer Hook</ThemedText>
+        <ThemedText type="title">useContext Hook</ThemedText>
       </ThemedView>
       <ThemedText></ThemedText>
-      <ThemedText>The <ThemedText type="defaultSemiBold">useEffect hook</ThemedText> is used to perform side effects in a function component. It is accepting two arguements and in result doesn't return anything.</ThemedText>
+      <ThemedText>The <ThemedText type="defaultSemiBold">useContext hook</ThemedText> is used to perform side effects in a function component. It is accepting two arguements and in result doesn't return anything.</ThemedText>
       
     </ParallaxScrollView>
   );
