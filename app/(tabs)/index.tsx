@@ -50,6 +50,8 @@ const HomeScreen = () => {
         <Text style={{fontSize: 40, color: 'white'}}>+</Text>
         </TouchableOpacity>
       </View>
+      <ThemedText type='subtitle'>When to use</ThemedText>
+      <ThemedText type="default">When you need to track and update something like a counter, text input, or toggle.</ThemedText>
     </ParallaxScrollView>
   );
 }

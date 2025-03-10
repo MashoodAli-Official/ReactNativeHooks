@@ -7,7 +7,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-const reducer = () => {
+const reducerHook = () => {
   const [add, setAdd] = useState(0); 
   useEffect(() => { console.log('Count changed:', add)}, [add]);
   
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default reducer;
+export default reducerHook;
