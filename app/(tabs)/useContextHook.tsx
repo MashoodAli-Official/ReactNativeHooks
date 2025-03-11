@@ -1,17 +1,16 @@
-import { StyleSheet, Image, Platform, Text, TouchableOpacity, View } from 'react-native';
-import {useContext, useEffect,useReducer,useState} from 'react';
+import { StyleSheet, Image, Platform, Text, TouchableOpacity, View ,Button} from 'react-native';
+import {useContext, createContext} from 'react';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { create } from 'react-test-renderer';
 
+const ThemeContext = createContext('light');
 const useContextHook = () => {
-  const [add, setAdd] = useState(0); 
-  useEffect(() => { console.log('Count changed:', add)}, [add]);
   
-
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#201080', dark: '#353636' }}
@@ -29,8 +28,18 @@ const useContextHook = () => {
       <ThemedText></ThemedText>
       <ThemedText>The <ThemedText type="defaultSemiBold">useContext hook</ThemedText> is used to perform side effects in a function component. It is accepting two arguements and in result doesn't return anything.</ThemedText>
       
+      <ThemeContext.Provider value="dark">
+        <ThemedText type='subtitle'>Current Active Theme: <ThemeComponent/></ThemedText>
+      </ThemeContext.Provider>
     </ParallaxScrollView>
   );
+};
+const ThemeComponent = () => {
+  const theme = useContext(ThemeContext);
+
+  return (
+      <ThemedText type='subtitle' style={{color: '#007bff'}}>{theme}</ThemedText>
+  )
 }
 
 const styles = StyleSheet.create({
