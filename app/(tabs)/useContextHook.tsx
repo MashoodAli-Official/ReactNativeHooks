@@ -31,6 +31,8 @@ const useContextHook = () => {
       <ThemeContext.Provider value="dark">
         <ThemedText type='subtitle'>Current Active Theme: <ThemeComponent/></ThemedText>
       </ThemeContext.Provider>
+      <ThemedText type='subtitle'>When to use</ThemedText>
+      <ThemedText type="default">When you need to share data (like a theme or user info) across many components.</ThemedText>
     </ParallaxScrollView>
   );
 };
