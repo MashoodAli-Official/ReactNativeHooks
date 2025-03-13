@@ -27,8 +27,8 @@ const reducerHook = () => {
         <ThemedText type="title">useReducer Hook</ThemedText>
       </ThemedView>
       <ThemedText></ThemedText>
-      <ThemedText>The <ThemedText type="defaultSemiBold">useEffect hook</ThemedText> is used to perform side effects in a function component. It is accepting two arguements and in result doesn't return anything.</ThemedText>
-      
+      <ThemedText>The <ThemedText type="defaultSemiBold">useEffect hook</ThemedText> an alternative to useState for managing complex state logic.</ThemedText>
+      <ThemedText>When to use: When you have multiple state transitions or related pieces of state (like a mini Redux).</ThemedText>
     </ParallaxScrollView>
   );
 }
