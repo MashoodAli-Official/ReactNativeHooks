@@ -28,8 +28,8 @@ const HomeScreen = () => {
         </ThemedText>
         <ThemedText type="defaultSemiBold">01: useState</ThemedText>
         <ThemedText type="defaultSemiBold">02: useEffect</ThemedText>
-        <ThemedText type="defaultSemiBold">03: useReducer</ThemedText>
-        <ThemedText type="defaultSemiBold">04: useRef</ThemedText>
+        <ThemedText type="defaultSemiBold">03: useReducer Hook</ThemedText>
+        <ThemedText type="defaultSemiBold">04: useRef Hook</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">useState: The Basics</ThemedText>
