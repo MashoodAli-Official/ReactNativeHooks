@@ -38,7 +38,10 @@ const reducerHook = () => {
       </ThemedView>
       <ThemedText></ThemedText>
       <ThemedText>The <ThemedText type="defaultSemiBold">useEffect hook</ThemedText> an alternative to useState for managing complex state logic.</ThemedText>
-      <ThemedText>When to use: When you have multiple state transitions or related pieces of state (like a mini Redux).</ThemedText>
+      <ThemedText><ThemedText type='defaultSemiBold'>When to use: </ThemedText>When you have multiple state transitions or related pieces of state (like a mini Redux).</ThemedText>
+      <ThemedText>When you have multiple related state values (e.g., form fields). When state transitions follow specific logic (e.g., increment, decrement, reset). When useState feels too simple for the job.
+
+</ThemedText>
 
       <View>
       <Text>Count: {state.count}</Text>
